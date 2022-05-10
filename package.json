@@ -4,7 +4,7 @@
   "description": "Stripe Node Boilerplate",
   "scripts": {
     "start": "node app.js",
-    "build": "cd client && node run build"
+    "build": "cd client && npm run build"
   },
   "author": "Matt Mitchell",
   "license": "MIT",
