@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-stripe {
+  --tw-bg-opacity: 1;
+  background-color: rgb(88, 101, 242);
+}
