@@ -35,15 +35,17 @@ function Carousel(props) {
         <div className="carousel-inner relative w-full overflow-hidden">
             {props.slides.map((slide, index) => (
             <div key={slide.name} className={"carousel-item relative float-left w-full " + isFirst(index)}>
-            <img
-                src={slide.src}
-                className="block w-full"
-                alt="..."
-            />
-            <div className="carousel-caption hidden md:block absolute text-center">
+            <a href={slide.href}>
+                <img
+                    src={slide.src}
+                    className="block w-full"
+                    alt="..."
+                />
+            </a>
+            {/* <div className="carousel-caption hidden md:block mb-20 absolute text-center rounded-lg bg-slate-400/50">
                 <h5 className="text-xl">{slide.name}</h5>
                 <p>{slide.description}</p>
-            </div>
+            </div> */}
             </div>
             ))}
             
