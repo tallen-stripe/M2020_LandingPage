@@ -7,7 +7,6 @@ import 'tw-elements';
 function App() {
   return (
     <>
-        <Carousel></Carousel>
         <Header></Header>
         <Footer></Footer>
     </>
