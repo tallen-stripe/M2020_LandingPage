@@ -34,3 +34,7 @@ $ npm start
 
 Open a web browser and navigate to [http://localhost:4567](http://127.0.0.1:4567)
 to see the example in action.
+
+# QR Codes
+
+[QR Coe Monkey](https://www.qrcode-monkey.com/)

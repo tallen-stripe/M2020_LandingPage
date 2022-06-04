@@ -1,63 +1,20 @@
 import React from 'react';
-import Carousel from './carousel';
 
-
-function Header(props) {
-    const demoLinks = [
-        {
-          name: 'Marketplace',
-          href: '#',
-          description:
-            'This is a demo of a physical goods marketplace similar to Etsy.',
-          src: 'img/marketplace.png',
-        },
-        {
-          name: 'Hotel',
-          href: '#',
-          description:
-            'Rentwell is a Stripe Custom Connect + global payments demo with. It features a rental marketplace similar to AirBnB or Vrbo. There are two personas, the host and renter.',
-          src: 'img/hotel.png',
-        },
-        {
-          name: 'Billing',
-          href: '#',
-          description:
-            'Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.',
-          src: 'img/marketplace.png',
-        },
-      ]
-
-    return (
-    <>
-        <div className="bg-white">
-      {/* Header */}
-      <Carousel slides={demoLinks}></Carousel>
-
-      {/* Overlapping cards */}
-      <section
-        className="mt-32 max-w-7xl mx-auto relative z-10 pb-32 px-4 sm:px-6 lg:px-8"
-        aria-labelledby="contact-heading"
-      >
-        <div className="grid grid-cols-1 gap-y-21 lg:grid-cols-3 lg:gap-y-0 lg:gap-x-8">
-          {demoLinks.map((link) => (
-            <div key={link.name} className="flex flex-col bg-white rounded-2xl shadow-xl">
-              <div className="flex-1 relative pt-16 px-6 pb-8 md:px-8">
-                <div className="absolute top-0 p-2 inline-block bg-stripe rounded-xl shadow-lg transform -translate-y-1/2">
-                  <img src={link.src} style={{height: '200px', width:'300px'}}></img>
-                </div>
-                <h3 className="text-xl font-medium mt-12 text-gray-900">{link.name}</h3>
-                <p className="mt-4 text-base text-gray-500">{link.description}</p>
-              </div>
-              <div className="p-6 bg-gray-50 rounded-bl-2xl rounded-br-2xl md:px-8">
-                <a href={link.href} className="text-base font-medium text-indigo-700 hover:text-indigo-600">
-                  Demo<span aria-hidden="true"> &rarr;</span>
-                </a>
-              </div>
+function Header() {
+    return (<>
+        <div className="">
+        <div className="grid grid-cols-2 max-w-7xl mx-auto py-2 px-4 sm:px-6 lg:px-8">
+            <img src='img/connect.svg' className="h-[100px]" />
+            <div>
+                <p className="mt-1 text-4xl ml-[-400px] pt-2 font-extrabold slate sm:text-5xl sm:tracking-tight lg:text-6xl">
+                    Connect Demos
+                </p>
+                <p className='mt-1 pl-5 ml-[-400px] font-medium slate  sm:tracking-tight '>
+                    The fastest and easiest way to integrate payments into your software platform or marketplace.
+                </p>
             </div>
-          ))}
         </div>
-      </section>
-    </div>
+        </div>
     </>);
 }
 

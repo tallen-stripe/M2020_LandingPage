@@ -6,3 +6,47 @@
   --tw-bg-opacity: 1;
   background-color: rgb(88, 101, 242);
 }
+
+.stripe {
+  --tw-bg-opacity: 1;
+  color: rgb(88, 101, 242);
+}
+
+.slate {
+  --tw-bg-opacity: 1;
+  color: rgb(10, 37, 64);
+}
+
+/* relevant styles */
+.img__wrap {
+  position: relative;
+  height: 240px;
+}
+
+.img__description {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+
+  /* transition effect. not necessary */
+  transition: opacity .2s, visibility .2s;
+}
+
+.img__wrap:hover .img__description {
+  visibility: visible;
+  background-color: white;
+  margin-left: -32px;
+  padding-left: 20px;
+  padding-right: 5px;
+  width: 100%;
+  opacity: 1;
+}
+
+.img__wrap:hover .img__description_wrap{
+  margin-bottom: 320px;
+}
+
+.video-mask{
+  border-radius: 10px; 
+  overflow: hidden; 
+}

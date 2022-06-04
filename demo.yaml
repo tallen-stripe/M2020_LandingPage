@@ -12,7 +12,7 @@ created_date: 2022-05-10
 # https://<subdomain>.stripedemos.com
 # https://<subdomain>.stripesandbox.com
 # recommendation: obfuscate the URL a bit by adding a random string
-subdomain: "m2020landing"
+subdomain: "m2020"
 
 # min 5 chars
 description: "Money 2020 Demo Landing Page"

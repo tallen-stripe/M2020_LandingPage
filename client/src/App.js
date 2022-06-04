@@ -1,13 +1,22 @@
 import './App.css';
 import Footer from './components/footer';
+import Cards from './components/cards';
+import Video from './components/video';
 import Header from './components/header';
-import Carousel from './components/carousel';
 import 'tw-elements';
 
 function App() {
   return (
     <>
-        <Header></Header>
+        <div style={{
+          backgroundImage: 'url("img/wave-wall-2.png")',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: '100%'
+      }}>
+          <Header></Header>
+          <Cards></Cards>
+        </div>
+        <Video></Video>
         <Footer></Footer>
     </>
   );

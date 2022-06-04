@@ -68,3 +68,25 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+# HLS Transcode
+
+```bash
+ffmpeg -i Money2020-landing_1.mp4 -profile:v baseline -level 3.0 -s 640x360 -start_number 0 -hls_time 10 -hls_list_size 0 -f hls ./Money2020-landing/360_out.m3u8
+ffmpeg -i Money2020-landing_1.mp4 -profile:v baseline -level 3.0 -s 800x480 -start_number 0 -hls_time 10 -hls_list_size 0 -f hls ./Money2020-landing/480_out.m3u8
+ffmpeg -i Money2020-landing_1.mp4 -profile:v baseline -level 3.0 -s 1280x720 -start_number 0 -hls_time 10 -hls_list_size 0 -f hls ./Money2020-landing/720_out.m3u8
+ffmpeg -i Money2020-landing_1.mp4 -profile:v baseline -level 3.0 -s 1920x1080 -start_number 0 -hls_time 10 -hls_list_size 0 -f hls ./Money2020-landing/1080_out.m3u8
+```
+
+```
+#EXTM3U
+#EXT-X-STREAM-INF:BANDWIDTH=375000,RESOLUTION=640x360
+360_out.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=750000,RESOLUTION=854x480
+480_out.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=2000000,RESOLUTION=1280x720
+720_out.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=3500000,RESOLUTION=1920x1080
+1080_out.m3u8
+```
