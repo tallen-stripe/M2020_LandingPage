@@ -1,2 +1,4 @@
-var player = videojs('demo_video');
+var player = videojs('demo_video', {
+    
+});
 player.play();
